@@ -18,18 +18,17 @@ El problema es que `composer` no es un paquete válido en Nix. Solo `php82Packag
 
 ## ✅ Solución Aplicada
 
-Se simplificó `nixpacks.toml` para dejar que Nixpacks detecte automáticamente PHP y Composer:
+Se **eliminó** `nixpacks.toml` para dejar que Nixpacks detecte automáticamente PHP y Composer:
 
-```toml
-[variables]
-PHP_VERSION = "8.2"
+**Nixpacks detectará automáticamente:**
+- PHP 8.2 (por `composer.json` que requiere `"php": "^8.2"`)
+- Composer (automático con PHP)
+- Laravel (por `composer.json`)
 
-[phases.install]
-cmds = ["composer install --no-dev --optimize-autoloader --no-interaction"]
-
-[start]
-cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
-```
+**Archivos que Railway usará:**
+- `composer.json` - Para detectar PHP y dependencias
+- `Procfile` o `railway.json` - Para el comando de inicio
+- `runtime.txt` - Para especificar versión de PHP (opcional)
 
 ## 🚀 Próximos Pasos
 
@@ -43,11 +42,11 @@ cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
    - Composer (automático con PHP)
    - Laravel (por `composer.json`)
 
-3. **Alternativa: Si el error persiste**
+3. **Si el error persiste**
 
-   **Opción A: Eliminar nixpacks.toml**
-   - Nixpacks puede detectar PHP/Composer automáticamente
-   - Solo necesitas `composer.json` y `Procfile`
+   **Opción A: Verificar archivos**
+   - Asegúrate de tener `composer.json` en `backend/`
+   - Asegúrate de tener `Procfile` o `railway.json`
 
    **Opción B: Usar Dockerfile**
    - Crea un `Dockerfile` en `backend/`
