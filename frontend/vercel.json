@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": ".output/public",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nuxtjs",
+  "regions": ["iad1"],
+  "env": {
+    "API_BASE_URL": "@api_base_url"
+  }
+}
+
