@@ -1,0 +1,54 @@
+╔════════════════════════════════════════════════════════════════╗
+║           PUNTO TATTO - INSTALACIÓN RÁPIDA                    ║
+╚════════════════════════════════════════════════════════════════╝
+
+🎯 OPCIÓN 1: INSTALACIÓN AUTOMÁTICA (Recomendada)
+─────────────────────────────────────────────────
+Ejecuta en la terminal:
+  
+  cd "/Users/marcocotero/Desktop/PUNTO TATTO 2026"
+  ./EJECUTAR_AHORA.sh
+
+Este script hace TODO automáticamente.
+(Solo necesitarás ingresar tu contraseña de administrador)
+
+
+🎯 OPCIÓN 2: PASO A PASO
+─────────────────────────────────────────────────
+
+1. Instalar herramientas:
+   ./instalar-auto.sh
+
+2. Crear base de datos:
+   createdb punto_tatto
+
+3. Editar backend/.env con tus credenciales de PostgreSQL
+
+4. Configurar proyecto:
+   ./configurar-proyecto.sh
+
+5. Iniciar servidores:
+   ./iniciar-proyecto.sh
+
+
+📋 VERIFICAR ESTADO
+─────────────────────────────────────────────────
+  ./verificar-instalacion.sh
+
+
+🌐 ACCESO AL PROYECTO
+─────────────────────────────────────────────────
+  Frontend: http://localhost:3000
+  Backend:  http://localhost:8000/api
+  Admin:    admin@puntotatto.com / admin123
+
+
+📚 DOCUMENTACIÓN
+─────────────────────────────────────────────────
+  - RESUMEN_INSTALACION.md
+  - INSTRUCCIONES_INSTALACION.md
+  - README.md
+
+
+✅ El proyecto está 100% listo, solo necesitas las herramientas instaladas.
+

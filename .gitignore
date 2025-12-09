@@ -1,0 +1,61 @@
+# Backend Laravel
+backend/vendor/
+backend/.env
+backend/storage/*.key
+backend/node_modules/
+backend/bootstrap/cache/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/storage/logs/*
+!backend/storage/logs/.gitkeep
+!backend/storage/framework/.gitkeep
+backend/.phpunit.result.cache
+backend/public/hot
+backend/public/storage
+backend/public/build
+
+# Frontend Nuxt
+frontend/node_modules/
+frontend/.nuxt/
+frontend/.output/
+frontend/.data/
+frontend/.nitro/
+frontend/.cache/
+frontend/dist/
+
+# IDE
+.idea/
+.vscode/
+.fleet/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+backend.log
+frontend.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+backend/.env.backup
+backend/.env.production
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Package manager locks (opcional - descomenta si quieres ignorarlos)
+# package-lock.json
+# yarn.lock
+# composer.lock
