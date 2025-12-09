@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "📤 Subir código a GitHub"
+echo "========================"
+echo ""
+echo "El repositorio está configurado y listo."
+echo ""
+echo "Para subir el código, ejecuta manualmente:"
+echo ""
+echo "  cd \"/Users/marcocotero/Desktop/PUNTO TATTO 2026\""
+echo "  git push -u origin main"
+echo ""
+echo "Cuando te pida credenciales:"
+echo "  Username: tu usuario de GitHub"
+echo "  Password: usa un TOKEN de acceso personal (no tu contraseña)"
+echo ""
+echo "Para crear un token:"
+echo "  https://github.com/settings/tokens/new"
+echo "  Selecciona permiso: repo"
+echo ""
+echo "O usa GitHub Desktop si lo tienes instalado."
+
